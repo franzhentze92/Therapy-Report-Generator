@@ -55,6 +55,25 @@ else:
 app = Flask(__name__)
 CORS(app)
 
+@app.route('/', methods=['GET'])
+def health_check():
+    return jsonify({
+        "status": "healthy",
+        "message": "Soil Therapy Report Generator Backend is running!",
+        "endpoints": [
+            "/extract-soil-report (POST)",
+            "/generate-comments (POST)", 
+            "/generate-soil-comments (POST)"
+        ]
+    })
+
+@app.route('/test', methods=['GET'])
+def test():
+    return jsonify({
+        "message": "Backend is working!",
+        "timestamp": "2024"
+    })
+
 
 def extract_tables_with_pdfplumber(file):
     tables = []
