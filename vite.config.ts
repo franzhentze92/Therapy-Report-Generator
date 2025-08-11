@@ -8,9 +8,9 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
     proxy: {
-      "/generate-comments": "http://localhost:5000",
-      "/generate-soil-comments": "http://localhost:5000",
-      "/extract-soil-report": "http://localhost:5000",
+      "/generate-comments": "https://therapy-report-generator-production.up.railway.app",
+      "/generate-soil-comments": "https://therapy-report-generator-production.up.railway.app",
+      "/extract-soil-report": "https://therapy-report-generator-production.up.railway.app",
     },
   },
   plugins: [

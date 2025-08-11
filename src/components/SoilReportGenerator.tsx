@@ -1192,7 +1192,7 @@ const SoilReportGenerator: React.FC<SoilReportGeneratorProps> = ({ paddockReport
       const formData = new FormData();
       formData.append('file', file);
       
-      const response = await fetch('http://localhost:5000/extract-soil-report', {
+              const response = await fetch('https://therapy-report-generator-production.up.railway.app/extract-soil-report', {
         method: 'POST',
         body: formData,
       });
